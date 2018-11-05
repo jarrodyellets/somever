@@ -10,6 +10,8 @@
     "semver"
   ],
   "dependencies": {
+    "bounce": "1.x.x",
+    "hoek": "6.x.x"
   },
   "devDependencies": {
     "code": "5.x.x",
