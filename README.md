@@ -7,5 +7,5 @@ meant to work as part of the hapi ecosystem which does not rely on external depe
 
 Lead Maintainer: [Eran Hammer](https://github.com/hueniverse)
 
-
+[![Linux Build Status](https://secure.travis-ci.org/hapijs/somever.svg?branch=master)](https://travis-ci.org/hapijs/somever)
 
