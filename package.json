@@ -1,7 +1,7 @@
 {
   "name": "@commercial/somever",
   "description": "Semantic versioning rules parser",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "repository": "git://github.com/hapijs/somever",
   "main": "lib/index.js",
   "keywords": [
