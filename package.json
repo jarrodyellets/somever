@@ -1,5 +1,5 @@
 {
-  "name": "somever",
+  "name": "@commercial/somever",
   "description": "Semantic versioning rules parser",
   "version": "1.0.1",
   "repository": "git://github.com/hapijs/somever",
@@ -10,15 +10,15 @@
     "semver"
   ],
   "dependencies": {
-    "hoek": "4.x.x"
+    "@commercial/hoek": "4.x.x"
   },
   "devDependencies": {
     "code": "4.x.x",
     "lab": "14.x.x"
   },
   "scripts": {
-    "test": "lab -a code -t 100 -L",
-    "test-cov-html": "lab -a code -r html -o coverage.html"
+    "test": "lab -a code -t 100 -L -l",
+    "test-cov-html": "lab -a code -r html -o coverage.html -l"
   },
-  "license": "BSD-3-Clause"
+  "license": "SEE LICENSE IN LICENSE.md"
 }

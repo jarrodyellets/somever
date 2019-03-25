@@ -1,21 +1,12 @@
-// Portions of the tests are based on https://github.com/npm/node-semver
-// node-semver is published under the ISC license, copyright (c) Isaac Z. Schlueter and Contributors
-
 'use strict';
 
-// Load modules
-
-const Lab = require('lab');
 const Code = require('code');
+const Lab = require('lab');
 const Somever = require('..');
 
 
-// Declare internals
-
 const internals = {};
 
-
-// Test shortcuts
 
 const { describe, it } = exports.lab = Lab.script();
 const expect = Code.expect;
@@ -24,6 +15,9 @@ const expect = Code.expect;
 describe('match()', () => {
 
     it('matches version within range', (done) => {
+
+        // Portions of the tests are based on https://github.com/npm/node-semver
+        // node-semver is published under the ISC license, copyright (c) Isaac Z. Schlueter and Contributors
 
         const tests = [
             ['1.0.0 - 2.0.0', '1.2.3'],
