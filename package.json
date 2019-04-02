@@ -1,10 +1,14 @@
 {
   "name": "@hapi/somever",
   "description": "Semantic versioning rules parser",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "repository": "git://github.com/hapijs/somever",
   "main": "lib/index.js",
-  "keywords": ["semantic", "version", "semver"],
+  "keywords": [
+    "semantic",
+    "version",
+    "semver"
+  ],
   "dependencies": {
     "@hapi/bounce": "1.x.x",
     "@hapi/hoek": "6.x.x"
