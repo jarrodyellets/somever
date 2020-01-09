@@ -292,6 +292,33 @@ describe('Version', () => {
     });
 });
 
+describe('compare()', () => {
+
+    it('ignores prerelease bias rules when comparison does not include a range', () => {
+
+        expect(Somever.compare('1.1.2-bis', '1.1.2')).to.equal(-1);
+    });
+
+    it('treats wildcard as a match for anything', () => {
+
+        expect(Somever.compare('1.x.x', '1.1.2')).to.equal(0);
+        expect(Somever.compare('x.1.1', '2.1.1')).to.equal(0);
+        expect(Somever.compare('1.1.x', '1.1.1')).to.equal(0);
+        expect(Somever.compare('1.x.1', '1.3.1')).to.equal(0);
+    });
+
+    it('compares prereleases', () => {
+
+        expect(Somever.compare('1.1.2-bis.z.1.3', '1.1.2-bis.z.1.3')).to.equal(0);
+        expect(Somever.compare('1.1.2-bis.z.1.3', '1.1.2-bis.z.1.3.4')).to.equal(-1);
+        expect(Somever.compare('1.1.2-bis.z.1.3', '1.1.2-bis.z.1.3.4.5')).to.equal(-1);
+        expect(Somever.compare('1.1.2-bis.z.1.3.4', '1.1.2-bis.z.1.3')).to.equal(1);
+        expect(Somever.compare('1.1.2-bis.z.1.3', '1.1.2-bis.z.1.4')).to.equal(-1);
+        expect(Somever.compare('1.1.2-bis.1.3', '1.1.2-bis.1.z')).to.equal(-1);
+        expect(Somever.compare('1.1.2-bis.1.z', '1.1.2-bis.1.3')).to.equal(1);
+    });
+});
+
 describe('Range', () => {
 
     it('creates dynamic rules', () => {
